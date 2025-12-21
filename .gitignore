@@ -1,0 +1,26 @@
+# Data and Models
+data/processed/
+data/raw/
+models/pretrained/
+models/*.pth
+models/*.h5
+*.npy
+*.parquet
+
+# Python / Jupyter
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+.venv/
+env/
+venv/
+.env
+
+# Final Results
+results/
+figures/
+report/*.log
+report/*.aux
+report/*.out
+report/*.toc

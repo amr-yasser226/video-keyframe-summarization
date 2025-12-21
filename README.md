@@ -41,7 +41,7 @@
 
 ---
 
-### NB03 — TVSum preprocessing + splits
+### NB03 — TVSum preprocessing + splits [FINISHED]
 
 **Primary responsibility:** turn raw annotations into learning targets
 
@@ -62,7 +62,7 @@
 
 ---
 
-### NB04 — CNN feature extraction (frozen backbone)
+### NB04 — CNN feature extraction (frozen backbone) [FINISHED]
 
 **Primary responsibility:** compute reusable per-frame embeddings
 
