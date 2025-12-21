@@ -60,6 +60,8 @@
 - Timestamp rounding drift
 - Variable original FPS across videos
 
+*Closes #4*
+
 ---
 
 ### NB04 — CNN feature extraction (frozen backbone) [FINISHED]
@@ -73,6 +75,8 @@
 
 - Feature dimension is consistent across all videos
 - Ordering matches the frame index exactly
+
+*Closes #5*
 
 ---
 
