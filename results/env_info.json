@@ -1,0 +1,7 @@
+{
+    "python": "3.12.12 (main, Oct 10 2025, 08:52:57) [GCC 11.4.0]",
+    "torch": "2.8.0+cu126",
+    "cuda": "12.6",
+    "opencv": "4.12.0",
+    "gpu_name": "Tesla P100-PCIE-16GB"
+}
