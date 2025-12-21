@@ -26,7 +26,7 @@
 
 ---
 
-### NB02 — Dataset structure & annotation loading
+### NB02 — Dataset structure & annotation loading [FINISHED]
 
 **Primary responsibility:** “Do we have the data, and can we read it?”
 
