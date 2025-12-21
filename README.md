@@ -1,17 +1,16 @@
 # video-keyframe-summarization
 
-### NB00 — Project overview
+### NB00 — Project overview [FINISHED]
 
 **Primary responsibility:** narrative + “map of the project”
 
 - Explains goal, approach, datasets, evaluation philosophy, and notebook order.
-- Produces the “single diagram” you can paste into a report.
 
 **Should not do:** any data processing or training.
 
 ---
 
-### NB01 — Setup & sanity checks
+### NB01 — Setup & sanity checks [FINISHED]
 
 **Primary responsibility:** ensure the environment can run the project
 
