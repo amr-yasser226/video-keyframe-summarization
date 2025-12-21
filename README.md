@@ -80,42 +80,45 @@
 
 ---
 
-### NB05 — BiLSTM training
+### NB05 — BiLSTM training [FINISHED]
 
 **Primary responsibility:** baseline temporal learning
 
 - Loads sequences of features and targets.
-- Trains BiLSTM and validates on val split.
-- Saves best checkpoint, metrics, and training curves.
+- Trains a **Compact BiLSTM** with a 256-dim projection bottleneck and LayerNorm.
+- Features Gaussian noise augmentation during training for improved generalization.
+- Saves best checkpoint based on Spearman Rho correlation.
 
 **Handles**
-
-- Variable-length sequences (padding + masking or packing)
-- Checkpointing and reproducible training
+- Variable-length sequences (padding + masking)
+- Data augmentation via feature-level noise
 
 ---
 
-### NB06 — Transformer training
+### NB06 — Transformer training [FINISHED]
 
-**Primary responsibility:** stronger temporal model comparison
+**Primary responsibility:** global temporal modeling comparison
 
-- Same data contract as BiLSTM, but Transformer encoder.
-- Must handle attention masks correctly for padding.
+- Implements an **Interpretable Transformer Encoder** with custom attention layers.
+- Uses `nhead=4` for stability on small video datasets.
+- Includes training warm-up and normalized patience to match the BiLSTM baseline.
 
 **Key deliverable**
-
-- Comparable metrics to BiLSTM with a clean apples-to-apples setup.
+- Attention weight extraction for qualitative interpretability.
 
 ---
 
-### NB07 — Inference + keyframe selection
+### NB07 — Inference & Qualitative Selection [FINISHED]
 
-**Primary responsibility:** convert model outputs into “a summary”
+**Primary responsibility:** convert model outputs into visual summaries
 
-- Runs model to get importance scores.
-- Applies selection policy (Top-K, suppression, smoothing).
-- Saves both raw predictions and final keyframe picks.
-- Generates qualitative visualizations (very report-friendly).
+- Unified inference pipeline for BiLSTM and Transformer architectures.
+- Applies **Top-15% duration budget** selection policy.
+- Generates 4-row comparative plots:
+    - Prediction Curves vs. Ground Truth
+    - BiLSTM Selection Mask
+    - Transformer Selection Mask
+    - Transformer Self-Attention Heatmap
 
 ---
 
