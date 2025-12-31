@@ -18,9 +18,12 @@ venv/
 .env
 
 # Final Results
-results/
-figures/
+# results/
+# figures/
 report/*.log
 report/*.aux
 report/*.out
 report/*.toc
+main.fdb_latexmk
+main.fls
+main.synctex.gz
