@@ -190,19 +190,56 @@
     \end{itemize}
 \end{frame}
 
-% 9. Sample Keyframes
-\begin{frame}{Qualitative Results: Sample Demo Keyframes}
-    \begin{block}{Cars Demo Video (T=126)}
+% 9. Qualitative Comparison: Cars Video
+\begin{frame}{Qualitative Comparison: Cars Demo Video}
+    \begin{columns}
+        \column{0.5\textwidth}
         \centering
-        \includegraphics[width=0.3\textwidth]{../results/demo_outputs/cars/keyframes/bilstm/kf_0018.jpg}
-        \includegraphics[width=0.3\textwidth]{../results/demo_outputs/cars/keyframes/bilstm/kf_0066.jpg}
-        \includegraphics[width=0.3\textwidth]{../results/demo_outputs/cars/keyframes/bilstm/kf_0103.jpg}
-    \end{block}
-    \begin{block}{AI Robot Demo Video (T=33)}
+        \textbf{BiLSTM Selection}
+        \vfill
+        \includegraphics[width=0.45\textwidth]{../results/demo_outputs/cars/keyframes/bilstm/kf_0018.jpg}
+        \includegraphics[width=0.45\textwidth]{../results/demo_outputs/cars/keyframes/bilstm/kf_0066.jpg}
+        \vfill
+        \includegraphics[width=0.45\textwidth]{../results/demo_outputs/cars/keyframes/bilstm/kf_0103.jpg}
+        
+        \column{0.5\textwidth}
         \centering
-        \includegraphics[width=0.3\textwidth]{../results/demo_outputs/ai_robot/keyframes/bilstm/kf_0004.jpg}
-        \includegraphics[width=0.3\textwidth]{../results/demo_outputs/ai_robot/keyframes/bilstm/kf_0007.jpg}
-    \end{block}
+        \textbf{Transformer Selection}
+        \vfill
+        \includegraphics[width=0.45\textwidth]{../results/demo_outputs/cars/keyframes/transformer/kf_0073.jpg}
+        \includegraphics[width=0.45\textwidth]{../results/demo_outputs/cars/keyframes/transformer/kf_0084.jpg}
+        \vfill
+        \includegraphics[width=0.45\textwidth]{../results/demo_outputs/cars/keyframes/transformer/kf_0105.jpg}
+    \end{columns}
+    \vfill
+    \begin{itemize}
+        \item \textbf{BiLSTM:} More uniform coverage of the sequence.
+        \item \textbf{Transformer:} Identical focus on climax frames (car entry).
+    \end{itemize}
+\end{frame}
+
+% 10. Qualitative Comparison: AI Robot
+\begin{frame}{Qualitative Comparison: AI Robot Demo Video}
+    \begin{columns}
+        \column{0.5\textwidth}
+        \centering
+        \textbf{BiLSTM Selection}
+        \vfill
+        \includegraphics[width=0.45\textwidth]{../results/demo_outputs/ai_robot/keyframes/bilstm/kf_0004.jpg}
+        \includegraphics[width=0.45\textwidth]{../results/demo_outputs/ai_robot/keyframes/bilstm/kf_0007.jpg}
+        
+        \column{0.5\textwidth}
+        \centering
+        \textbf{Transformer Selection}
+        \vfill
+        \includegraphics[width=0.45\textwidth]{../results/demo_outputs/ai_robot/keyframes/transformer/kf_0002.jpg}
+        \includegraphics[width=0.45\textwidth]{../results/demo_outputs/ai_robot/keyframes/transformer/kf_0009.jpg}
+    \end{columns}
+    \vfill
+    \begin{itemize}
+        \item \textbf{Comparison:} Models agree on high-importance action frames.
+        \item \textbf{Budget:} 15\% frame budget maintained per selection logic.
+    \end{itemize}
 \end{frame}
 
 \section{Conclusion}
